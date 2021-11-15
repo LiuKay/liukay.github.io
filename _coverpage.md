@@ -3,8 +3,8 @@
 </p>
 <h1 align="center">Kaybee-Notes</h1>
 
-[GitHub](https://github.com/LiuKay/Kaybee-Notes)
-[开始阅读](#Kaybee-Notes)
+[GitHub](https://github.com/LiuKay/KaybeeNotes)
+[开始阅读](#KaybeeNotes)
 
 
 
