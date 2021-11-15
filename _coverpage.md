@@ -3,8 +3,7 @@
 </p>
 <h1 align="center">Kaybee-Notes</h1>
 
-[常用资源](https://shimo.im/docs/MuiACIg1HlYfVxrj/)
-[GitHub](https://github.com/LiuKay/notes)
+[GitHub](https://github.com/LiuKay/Kaybee-Notes)
 [开始阅读](#Kaybee-Notes)
 
 
