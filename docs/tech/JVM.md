@@ -18,7 +18,7 @@
 
 #### 1. 1 类加载过程
 
-1. **加载(Loading)**：通过类的全限定名获取该类的二进制流，将二进制的静态结构转化成方法区的运行时数据结构，在内存中生成一个Class 对象作为该方法区数据结构的入口。数组类不通过类的加载器创建，而是由虚拟机直接创建，但数组类的元素类型（Element Type）需要类加载器创建。
+1. **加载(Loading)** 通过类的全限定名获取该类的二进制流，将二进制的静态结构转化成方法区的运行时数据结构，在内存中生成一个Class 对象作为该方法区数据结构的入口。数组类不通过类的加载器创建，而是由虚拟机直接创建，但数组类的元素类型（Element Type）需要类加载器创建。
 2. **连接(Linking)**
 
    - 验证(Verification)：验证 Class 文件的字节流中包含的信息符合当前虚拟机的要求
@@ -26,7 +26,7 @@
    - 准备(Preparation)：为类变量（静态变量）和常量分配内存和零值(reference=null)
 
    - 解析(Resolution)：将常量池里面的符号引用解析成直接引用（非必须）
-3. **初始化(Initialization)**：执行类构造器 `<clinit>` 方法，类构造器是编译器自动收集的类变量赋值语句和由 static 块语句合并产生的，虚拟机保证父类中的`<clinit>`先执行，并确保只执行一次。
+3. **初始化(Initialization)** 执行类构造器 `<clinit>` 方法，类构造器是编译器自动收集的类变量赋值语句和由 static 块语句合并产生的，虚拟机保证父类中的`<clinit>`先执行，并确保只执行一次。
 
 > 注意类构造器 <clinit> 与实例的构造器<init>(即构造函数)的区别，类构造器是一些静态变量和 static 语句组成，由编译器生成，在初始化的时候被调用。
 
@@ -112,7 +112,7 @@ Java程序会通过栈上的 reference 来操作堆上的具体对象。具体�
 
 - 句柄访问：Java堆中将可能会划分出一块内存来作为句柄池，reference 中存储的就是对象的句柄地址，而句柄中包含了对象实例指针与类型数据指针(方法区)，好处是垃圾收集移动对象的时候只需改变句柄中对象实例指针，reference 本身不用修改
 
-![image-20211026200937087](https://gitee.com/kaybee/markdown_pics/raw/master/img/jvm_visit_object_by_handlers)
+![image-20211026200937087](https://gitee.com/kaybee/markdown_pics/raw/master/img/jvm_visit_object_by_handlers.png)
 
 - 直接指针访问：reference  直接指向堆中的对象实例，而对象实例中包含数据和指向类型数据的指针(指向方法区)，好处就是访问对象速度更快，它节省了一次指针定位的时间开销( HotSpot 使用这种方式)
 
@@ -332,7 +332,7 @@ G1 收集器把连续的 Java 堆划分为多个大小相等的独立区域（Re
 
 G1 收集器的运作过程大体划分为4个步骤：
 
-（根据《深入理解Java虚拟机(第3版)》分为4个步骤，官方文档上面分的更细，请参考[Getting Started with the G1 Garbage Collector (oracle.com)](https://www.oracle.com/technetwork/tutorials/tutorials-1876574.html#:~:text=G1 is planned as the long term replacement,lists for allocation%2C and instead relies on regions.)）
+根据《深入理解Java虚拟机(第3版)》分为4个步骤，官方文档上面分的更细，请参考[Getting Started with the G1 Garbage Collector (oracle.com)](https://www.oracle.com/technetwork/tutorials/tutorials-1876574.html#:~:text=G1 is planned as the long term replacement,lists for allocation%2C and instead relies on regions.)
 
 1. 初始标记(Initial Marking)：仅仅标记一下 GC Roots能直接关联的对象，并修改 `TAMS` 指针的值方便下阶段并发运行时能分配新对象，这个阶段耗时短，需要停顿线程，在 Minor GC 时同步完成。
 2. 并发标记(Concurrent Marking)：从GC Roots直接关联对象开始遍历对象图的过程，并发执行
@@ -373,11 +373,11 @@ G1 的适应场景([Garbage-First Garbage Collector Tuning (oracle.com)](https:/
 
 ### 5 HotSpot 虚拟机的一些垃圾收集算法实现
 
-#### 1 根节点枚举：
+#### 1 根节点枚举
 
 Java虚拟机 HotSpot 的实现中，使用一组称为OopMap的数据结构来存放对象引用，从而可以快速且准确的完成GC Root扫描。但程序执行的过程中，引用关系随时都可能发生变化，而HotSpot虚拟机只会在特殊的指令位置才会生成 OopMap来记录引用关系，这些位置便被称为Safepoint。换句话说，就是在Safepoint这个点上，虚拟机对于调用栈、寄存器等一些重要的数据区域里什么地方包含了什么引用是十分清楚的，这个时候是可以很快完成GC Roots的扫描和可达性分析的。HotSpot会在所有方法的临返回之前，以及所有Uncounted loop的循环回跳之前放置 Safepoint。当需要GC时候，虚拟机会首先设置一个标志，然后等待所有线程进入Safepoint，但是不同线程进入Safepoint 的时间点不一样，先进入Safepoint 的线程需要等待其他线程全部进入Safepoint，所以Safepoint是会导致STW的。
 
-#### 2 安全点 Safe Point 与安全区 Safe Region：
+#### 2 安全点 Safe Point 与安全区 Safe Region
 
 [JVM相关 - SafePoint 与 Stop The World 全解 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/161710652)
 
@@ -665,7 +665,7 @@ class com.kay.jvm.other.Dispatch {
 
 ## 参考资料：
 
-《深入理解Java虚拟机：JVM高级特性与最佳实践(第3版)》 周志明
+《深入理解Java虚拟机：JVM高级特性与最佳实践(第3版)》 - 周志明
 
 Java SE 11 虚拟机规范：[The Java® Virtual Machine Specification (oracle.com)](https://docs.oracle.com/javase/specs/jvms/se11/jvms11.pdf)
 
