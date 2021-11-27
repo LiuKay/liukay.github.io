@@ -10,7 +10,7 @@ Redis 的字符串表示为sds ，而不是C 字符串（以\0 结尾的char*）
   - 可以高效地执行长度计算（strlen）；
   - 可以高效地执行追加操作（append）；
   - 二进制安全；
--  sds 会为追加操作进行优化：加快追加操作的速度，并降低内存分配的次数，代价是多占
+- sds 会为追加操作进行优化：加快追加操作的速度，并降低内存分配的次数，代价是多占
   用了一些内存，而且这些内存不会被主动释放。
 
 sds 的实现
@@ -40,8 +40,8 @@ char buf[];
 - 双端链表及其节点的性能特性如下：
   - 节点带有前驱和后继指针，访问前驱节点和后继节点的复杂度为O(1) ，并且对链表
     的迭代可以在从表头到表尾和从表尾到表头两个方向进行；
-  -  链表带有指向表头和表尾的指针，因此对表头和表尾进行处理的复杂度为O(1) ；
-  -  链表带有记录节点数量的属性，所以可以在O(1) 复杂度内返回链表的节点数量（长
+  - 链表带有指向表头和表尾的指针，因此对表头和表尾进行处理的复杂度为O(1) ；
+  - 链表带有记录节点数量的属性，所以可以在O(1) 复杂度内返回链表的节点数量（长
     度）；
 
 ### 字典 dict
@@ -54,7 +54,7 @@ char buf[];
 
 - Redis 字典的底层实现为哈希表，每个字典使用两个哈希表，一般情况下只使用0 号哈希
   表，只有在rehash 进行时，才会同时使用0 号和1 号哈希表。
-  
+
 - 哈希表使用链地址法来解决键冲突的问题。
 
 - Rehash 可以用于扩展或收缩哈希表。
@@ -91,9 +91,10 @@ char buf[];
 么长度的整数类型来保存元素。
 
 Intset 是集合键的底层实现之一，如果一个集合：
+
 1. 只保存着整数元素；
 2. 元素的数量不多；
-那么Redis 就会使用intset 来保存集合元素。
+   那么Redis 就会使用intset 来保存集合元素。
 
 ### 压缩列表 - ziplist
 
@@ -102,6 +103,8 @@ Ziplist 是由一系列特殊编码的内存块构成的列表，因为节约内
 
 
 ## Redis 数据类型
+
+可以使用 `object encoding <key>`来查看某个key 底层编码。
 
 redisObject 是Redis 类型系统的核心，数据库中的每个键、值，以及Redis 本身处理的参数，都表示为这种数据类型。
 
@@ -129,7 +132,7 @@ redisObject 是Redis 类型系统的核心，数据库中的每个键、值，�
 创建空白哈希表时，程序默认使用 REDIS_ENCODING_ZIPLIST 编码，当以下任何一个条件被满足时，程序将编码从切换为REDIS_ENCODING_HT ：
 
 - 哈希表中某个键或某个值的长度大于server.hash_max_ziplist_value （默认值为64）。
--  压缩列表中的节点数量大于server.hash_max_ziplist_entries （默认值为512)
+- 压缩列表中的节点数量大于server.hash_max_ziplist_entries （默认值为512)
 
 ### 列表  REDIS_LIST
 
@@ -138,7 +141,7 @@ redisObject 是Redis 类型系统的核心，数据库中的每个键、值，�
 创建新列表时Redis 默认使用 REDIS_ENCODING_ZIPLIST 编码，当以下任意一个条件被满足时，列表会被转换成 REDIS_ENCODING_LINKEDLIST 编码：
 
 - 试图往列表新添加一个字符串值， 且这个字符串的长度超过server.list_max_ziplist_value （默认值为64 ）。
--  ziplist 包含的节点超过server.list_max_ziplist_entries （默认值为512)
+- ziplist 包含的节点超过server.list_max_ziplist_entries （默认值为512)
 
 #### 列表的阻塞操作
 
@@ -224,6 +227,43 @@ zset 同时使用字典和跳表两个数据结构来保存有序集元素，元
 
 
 ## Redis 其他功能
+
+### Bitmap 位图
+
+Bitmap 又称位图，其实质是 bit array。
+
+`SETBIT key offset 0或1`该命令为位数组中指定偏移量的位置设置值为 0 或 1. 如
+
+```shell
+setbit userkey 3 1 # 即将第3位设置为1: 0000 0100
+bitcount userkey # 1 统计 userkey 中有几位是1
+```
+
+Bitmap 可以用来做快速检索，统计等，并且支持按位与、按位或、按位异或
+
+`BITOP AND\OR\XOR\NOT dest_key key1 key2 [..] `，该命令使用 C 语言内置的位操作来实现。
+
+优点：省内存，运算效率高
+
+缺点：数据不能重复，数据如果比较稀疏的话效果不是很明显
+
+应用场景：
+
+快速排序，查找
+
+朋友圈点赞，统计点赞数，是否点赞等。
+
+用布隆过滤器解决缓存穿透的问题
+
+#### Redis 对 Bitmap 的底层实现
+
+Redis 底层使用字符串对象SDS来保存位图，buf 字节数组，每个元素保存一个一个字节，里面保存的位的顺序与位的书写顺序相反，目的是方便的支持扩充数组，而不改变之前数组元素。
+
+BITCOUNT 使用查表和  `variable-precision SWAR` 算法来优化执行效率。
+
+![image-20211118173717646](https://gitee.com/kaybee/markdown_pics/raw/master/img/redis_bitmap_sds.png)
+
+
 
 ### 事务
 
@@ -494,9 +534,13 @@ Redis 服务器是一个事件驱动程序，主要处理两类事件：
 - 文件事件（file event）
 - 时间事件（time event）
 
-#### 文件事件
+#### 文件事件与 IO 模型
 
 Redis 基于 Reactor 模式开发的网络事件处理器，称为文件事件处理器 file event handler。
+
+Redis 的 IO 多路复用模块会根据底层系统提供的能力来适配，因为讲底层操作系统的函数都封装成了统一的 API，在编译时能够自动选择系统中性能最高的 IO 多路复用函数库来作为其 API 的实现。
+
+其优先级为：`evport -> epoll -> kqueue -> select`
 
 ![image-20211107182745300](https://gitee.com/kaybee/markdown_pics/raw/master/img/redis_file_event_handler.png)
 
@@ -506,6 +550,8 @@ I/O 多路复用程序可以监听多个套接字的 `ae.h/AE_READABLE` 事件�
 - 当套接字变得可写时（客户端对套接字执行 `read` 操作）， 套接字产生 `AE_WRITABLE` 事件。
 
 I/O 多路复用程序允许服务器同时监听套接字的 `AE_READABLE` 事件和 `AE_WRITABLE` 事件， 如果一个套接字同时产生了这两种事件， 那么文件事件分派器会优先处理 `AE_READABLE` 事件， 等到 `AE_READABLE` 事件处理完之后， 才处理 `AE_WRITABLE` 事件。
+
+
 
 #### 时间事件
 
@@ -656,27 +702,94 @@ Redis 集群通过分片的方式来保存数据库中的键值对：集群的�
 
 ## 问题
 
-Redis 为什么快
+### Redis 为什么快?
 
-Redis 有哪些数据结构，各有什么特点，应用场景
+![aaa](https://gitee.com/kaybee/markdown_pics/raw/master/img/redis_IO_model_event_handler.png)
 
-缓存三大问题，以及如何解决：
+1. 使用非阻塞的异步 IO 模型
+2. 纯内存操作
+3. 单线程模型，减少线程上下文的切换，也避免了多线程的数据竞争
 
-- 缓存雪崩
+### Redis 有哪些数据结构，各有什么特点，应用场景
+
+1. string
+
+   最常见的字符串存取
+
+2. hash
+
+   字典结构，类似于一个 map 结构
+
+   场景：可以存一些简单的对象(无嵌套结构)，修改的时候只更新某个字段
+
+3. list
+
+   有序列表，可以放重复的元素。
+
+   场景：可以用来做高性能的内存分页查询，lrange begin offset
+
+4. set
+
+   集合，无重复元素
+
+   场景：可以用来去重，社交场景中查询2个人之间的相同好友
+
+5. zset
+
+   有序结合，无重复元素，但是可以有相同的 score
+
+   场景：可以用来实现排行榜，top N 等
+
+### 缓存三大问题，以及如何解决：
+
+- 缓存雪崩：
+
+  大量缓存同一时间段失效，大量查询直接打到数据库了，导致数据库压力过大而宕机。
+
+  解决：1. 给缓存在固定过期时间的基础上设置一个随机值 2. 缓存预热 3.  更新时加互斥锁
 
 - 缓存击穿
 
-- 缓存穿透：大量查询数据库中不存在的数据
+  缓存击穿是指缓存中没有但数据库中有的数据（一般是缓存时间到期），**主要指并发查同一个数据**，一部分操作去访问了数据库。
 
-Redis 集群有哪些策略
+  解决：1. 设置热点数据不过期（修改需要维护）2.加互斥锁（CAS）
 
-Redis 持久化有哪些方式，原理是什么，优缺点
+- 缓存穿透：
 
-Redis 过期策略（key过期时）
+  大量查询数据库中不存在的数据
 
-Redis  内存淘汰策略（内存不足时）
+  解决：1. 缓存空对象；2. 使用布隆过滤器来解决
 
-### Redis 为什么用跳表而不用平衡树
+### Redis 集群有哪些策略
 
-SkipList 在插入、查询、删除等操作上与红黑树性能差不多，同时实现起来还比较简单，另外一个很重要的特点是 SkipList 的范围查找性能也比较高，都是 O(logN)
+### Redis 持久化有哪些方式，原理是什么，优缺点
+
+见本文持久化关于 RDB，AOF的介绍。
+
+### Redis 数据过期策略有哪些？
+
+[Using Redis as an LRU cache – Redis](https://redis.io/topics/lru-cache)
+
+|   **Policy**    |                       **Description**                        |
+| :-------------: | :----------------------------------------------------------: |
+|   noeviction    | Returns an error if the memory limit has been reached when trying to insert more data |
+|   allkeys-lru   |     Evicts the least recently used keys out of all keys      |
+|   allkeys-lfu   |    Evicts the least frequently used keys out of all keys     |
+| allkeys-random  |             Randomly evicts keys out of all keys             |
+|  volatile-lru   | Evicts the least recently used keys out of all keys with an “expire” field set |
+|  volatile-lfu   | Evicts the least frequently used keys out of all keys with an “expire” field set |
+| volatile-random |       Randomly evicts keys with an “expire” field set        |
+|  volatile-ttl   | Evicts the shortest time-to-live keys out of all keys with an “expire” field set. |
+
+其中 volatile-* 策略只会处理设置了过期时间的数据，如果没有找到可以删除的数据来释放内存的话，最终会使用 noeviction 策略。
+
+一般作为缓存来说使用 `allkeys-lru`的过期策略是一个不错的选择，因为为一个 key 设置过期时间也会消耗内存，所以在淘汰发生时，按照 LRU 算法能够保证热点数据的访问，也能降低内存的压力。
+
+**allkeys-random** 的使用场景一般是循环的扫描，对所有数据来说，他们的分布都是平均的。
+
+**volatile-ttl** 的场景是系统中的大多数数据全部都设置了过期时间，优先淘汰过期时间最短的数据，通过使用过期时间的设置来淘汰数据，这种情况需要对每种数据的过期时间有一个优先级别的考虑。
+
+### Redis 为什么用跳表而不用平衡树来实现有序结合 zset
+
+SkipList 在插入、查询、删除等操作上与红黑树性能差不多，同时实现起来还比较简单，另外一个很重要的特点是 SkipList 的范围查找性能也比较高，都是 O(logN)，可以使 zset 使用 score 来做高性能的范围查找
 
