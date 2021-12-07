@@ -12,4 +12,4 @@
   * [微服务](docs/tech/微服务.md)
 * 专题学习
 * 散落的明珠
-  * [IO Models](docs/tips/IO_Models.md)
+  * [IO Models](docs/knowledge/IO_Models.md)
