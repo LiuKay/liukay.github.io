@@ -8,13 +8,13 @@
 
 类加载子系统将二进制的字节码读入和转换成虚拟机能够处理的数据结构，Java 虚拟机在执行Java程序的过程中将它所管理的内存区域划分为若干不同的数据区域，这些区域有不同作用，统称为运行时数据区域。执行引擎是虚拟机的执行字节码的概念模型，在虚拟机的实现中有解释执行（通过解释器执行）和编译执行（通过即时编译器生成本地代码执行）2种类型。
 
-![JVM-Architecture](https://gitee.com/kaybee/markdown_pics/raw/master/img/JVM-Architecture.png)
+![JVM-Architecture](/images/JVM-Architecture.png)
 
 ## 1 类加载机制
 
 类加载机制通过类加载器（Class Loader）来将二进制的字节码加载到虚拟机内存中来，类加载的过程包括了加载、连接、初始化三个阶段。其中连接阶段又包括了验证、准备、解析三个步骤。类加载的各阶段会按照严格顺序开始启动，但并不是一定要等一个阶段执行完了才会开始下一个，可能会同步进行。
 
-![JVM class loading](https://gitee.com/kaybee/markdown_pics/raw/master/img/JVM_class_loading.jpg)
+![JVM class loading](/images/JVM_class_loading.jpg)
 
 #### 1. 1 类加载过程
 
@@ -97,7 +97,7 @@
 
 #### 对象的内存布局
 
-![jdk8_memory layourt of Java objects](https://gitee.com/kaybee/markdown_pics/raw/master/img/jdk8_memory_layout_of_Java_objects.jpg)
+![jdk8_memory layourt of Java objects](/images/jdk8_memory_layout_of_Java_objects.jpg)
 
 - 对象头 Header
   - Mark Word：对象自身运行时数据，如哈希码，GC分代，锁状态等
@@ -112,11 +112,11 @@ Java程序会通过栈上的 reference 来操作堆上的具体对象。具体�
 
 - 句柄访问：Java堆中将可能会划分出一块内存来作为句柄池，reference 中存储的就是对象的句柄地址，而句柄中包含了对象实例指针与类型数据指针(方法区)，好处是垃圾收集移动对象的时候只需改变句柄中对象实例指针，reference 本身不用修改
 
-![image-20211026200937087](https://gitee.com/kaybee/markdown_pics/raw/master/img/jvm_visit_object_by_handlers.png)
+![image-20211026200937087](/images/jvm_visit_object_by_handlers.png)
 
 - 直接指针访问：reference  直接指向堆中的对象实例，而对象实例中包含数据和指向类型数据的指针(指向方法区)，好处就是访问对象速度更快，它节省了一次指针定位的时间开销( HotSpot 使用这种方式)
 
-![image-20211026201027725](https://gitee.com/kaybee/markdown_pics/raw/master/img/jvm_visit_object_directly.png)
+![image-20211026201027725](/images/jvm_visit_object_directly.png)
 
 ## 3 内存回收
 
@@ -130,7 +130,7 @@ Java程序会通过栈上的 reference 来操作堆上的具体对象。具体�
 
   从 GC Root 开始遍历引用，能够到达的对象为存活对象，无法达到的对象未不可达对象，即垃圾收集的目标对象
 
-  ![GC Roots to objects(Image: dynatrace.com)](https://gitee.com/kaybee/markdown_pics/raw/master/img/GC_Roots_to_objects.png)
+  ![GC Roots to objects(Image: dynatrace.com)](/images/GC_Roots_to_objects.png)
 
 ##### GC Roots
 
@@ -224,7 +224,7 @@ Java程序会通过栈上的 reference 来操作堆上的具体对象。具体�
 
 (*基于分代收集理论的垃圾收集器*)
 
-![java_object_allocated_in_JVM](https://gitee.com/kaybee/markdown_pics/raw/master/img/java_object_allocated_in_JVM.png)
+![java_object_allocated_in_JVM](/images/java_object_allocated_in_JVM.png)
 
 *(参考：[Java Garbage Collection Logs & How to Analyze Them - Sematext]([Java Garbage Collection Logs & How to Analyze Them - Sematext](https://sematext.com/blog/java-garbage-collection-logs/)))*
 
@@ -250,7 +250,7 @@ Java程序会通过栈上的 reference 来操作堆上的具体对象。具体�
 
 ### 4 常见的 HotSpot 垃圾收集器
 
-![HotSpot虚拟机的垃圾收集器](https://gitee.com/kaybee/markdown_pics/raw/master/img/HotSpot虚拟机的垃圾收集器.png)
+![HotSpot虚拟机的垃圾收集器](/images/HotSpot虚拟机的垃圾收集器.png)
 
 HotSpot 的垃圾收集器：
 
@@ -266,7 +266,7 @@ Serial Old 收集器使用标记-整理算法来收集老年代。
 
 特点：1.单线程；2.内存消耗小，适应于运行在客户端模式的虚拟机
 
-![Serial 收集器运行示意图](https://gitee.com/kaybee/markdown_pics/raw/master/img/jvm_serial_collector.png)
+![Serial 收集器运行示意图](/images/jvm_serial_collector.png)
 
 *（Serial + Serial Old 收集器运行示意图，Serial Old 是 Serial 收集器的老年代版本）*
 
@@ -274,7 +274,7 @@ Serial Old 收集器使用标记-整理算法来收集老年代。
 
 ParNew 收集器（新生代）是 Serial 收集器的多线程并行版本，JDK9之后，唯一能与 CMS 收集器（老年代）配合工作的收集器。
 
-![image-20211009145356618](https://gitee.com/kaybee/markdown_pics/raw/master/img/jvm_ParNew_collector.png)
+![image-20211009145356618](/images/jvm_ParNew_collector.png)
 
 *（ParNew + Serial Old 收集器运行示意图，Serial Old 是 Serial 收集器的老年代版本）*
 
@@ -291,13 +291,13 @@ Parallel Old 是 Parallel Scavenge 的来年代版本，支持多线程并行收
 
 > 吞吐量： 运行用户代码的时间/ (运行用户代码的时间+运行垃圾收集时间)。假设用户代码运行时间加上垃圾收集时间为100分钟，垃圾收集时间为1分钟，则吞吐量为99%，高的吞吐量能够高效地利用处理器的资源。
 
-![image-20211009152901004](https://gitee.com/kaybee/markdown_pics/raw/master/img/jvm_Parallel_Scavenge_Parallel_Old收集器运行示意图.png)
+![image-20211009152901004](/images/jvm_Parallel_Scavenge_Parallel_Old收集器运行示意图.png)
 
 *（Parallel Scavenge/Parallel Old收集器运行示意图）*
 
 ##### 4 CMS 收集器 
 
-![2021-10-31_104811](https://gitee.com/kaybee/markdown_pics/raw/master/img/jvm_CMS_heap.png)
+![2021-10-31_104811](/images/jvm_CMS_heap.png)
 
 CMS (Concurrent Mark Sweep) 收集器（JDK9 标记为Deprecated），以获取最短回收停顿时间为目标的收集器，基于标记-清除算法，整个过程分为4个步骤：
 
@@ -306,7 +306,7 @@ CMS (Concurrent Mark Sweep) 收集器（JDK9 标记为Deprecated），以获取�
 3. 重新标记（remark）：修正并发标记阶段改变的对象标记，多线程执行，时间相对也短，`需要 STW`
 4. 并发清除（concurrent sweep）：并发清除需要收集的对象，与用户线程同时执行
 
-![jvm_CMS_collector](https://gitee.com/kaybee/markdown_pics/raw/master/img/jvm_CMS_collector.png)
+![jvm_CMS_collector](/images/jvm_CMS_collector.png)
 
 *（CMS 收集器运行示意图）*
 
@@ -326,7 +326,7 @@ G1 收集器的目的是提供一个在延迟和吞吐量之间达到最佳平�
 
 G1 收集器把连续的 Java 堆划分为多个大小相等的独立区域（Region），每一个 Region 都可以（在逻辑上）根据需要作为新生代的 Eden、Survivor空间，或老年代空间，收集器根据不同 Region 扮演的角色采用不同的策略去处理。
 
-![jvm_G1_heap](https://gitee.com/kaybee/markdown_pics/raw/master/img/jvm_G1_heap.png)
+![jvm_G1_heap](/images/jvm_G1_heap.png)
 
 *（G1 收集器将内存划分为多个 Region）*
 
@@ -339,7 +339,7 @@ G1 收集器的运作过程大体划分为4个步骤：
 3. 最终标记(Final Marking)：对用户线程做另一个短暂的暂停，用于处理并发阶段结束后仍遗留下来的最后那少量的 `SATB` 记录。
 4. 筛选回收(Live Data Counting and Evacuation)：更新 Region的统计数据，对各Region 的回收价值和成本进行排序，根据用户期望指定回收计划，将决定回收的那一部分 Region的存活多谢复制到空的 Region中，再清理掉整个旧的 Region。需要移动存活对象，需要 STW，由多条线程并行完成。
 
-![jvm_G1_collector](https://gitee.com/kaybee/markdown_pics/raw/master/img/jvm_G1_collector.png)
+![jvm_G1_collector](/images/jvm_G1_collector.png)
 
 *(G1 收集器运行示意图)*
 
@@ -413,7 +413,7 @@ Java虚拟机 HotSpot 的实现中，使用一组称为OopMap的数据结构来�
 
 “标记”阶段是所有追踪式垃圾收集算法的共同特征，朴素的“标记-清除”算法有一个缺点，在对象的标记过程中，对象的关系图是不能修改的，这个时候需要暂停用户线程来保证对象关系在一个一致的状态里，这种情况是一些实时应用和对响应比较敏感的应用是无法接受的。这个时候就需要能够支持并发的标记算法。
 
-![Animation_of_the_Naive_Mark_and_Sweep_Garbage_Collector_Algorithm](https://gitee.com/kaybee/markdown_pics/raw/master/img/Animation_of_the_Naive_Mark_and_Sweep_Garbage_Collector_Algorithm.gif)
+![Animation_of_the_Naive_Mark_and_Sweep_Garbage_Collector_Algorithm](/images/Animation_of_the_Naive_Mark_and_Sweep_Garbage_Collector_Algorithm.gif)
 
 *（朴素的 mark-sweep 过程示例图 <u>[Tracing garbage collection - Wikipedia](https://en.wikipedia.org/wiki/Tracing_garbage_collection#Reachability_of_an_object)</u>)）*
 
@@ -429,7 +429,7 @@ Java虚拟机 HotSpot 的实现中，使用一组称为OopMap的数据结构来�
 
 可达性分析的扫描过程是在对象图上从 White-> Gray -> Black 推进，一开始所有对象都是 White 颜色，然后从 GC Roots 开始访问，每次迭代都会将 Grey 引用的 White 对象标成 Grey，并将 Grey 对象标记成 Black，直到没有 Grey 对象为止。标记之后一个对象最终只会是 Black 或者 White，其中所有可达的对象最终都会是 Black。
 
-![Animation_of_tri-color_garbage_collection](https://gitee.com/kaybee/markdown_pics/raw/master/img/Animation_of_tri-color_garbage_collection.gif)
+![Animation_of_tri-color_garbage_collection](/images/Animation_of_tri-color_garbage_collection.gif)
 
 *(基于三色标记算法的 mark-sweep 示例图<u>[Tracing garbage collection - Wikipedia](https://en.wikipedia.org/wiki/Tracing_garbage_collection#Reachability_of_an_object)</u>)*
 
@@ -522,7 +522,7 @@ JVM 定义的数据类型分为2大类，一类是基本类型，还有一类是
 
 Java 虚拟机以方法作为最基本的执行单元，方法的执行对应 Java 虚拟机栈中栈帧的入栈和出栈，`栈帧`是用于支持虚拟机进行方法执行的数据结构。栈帧中存储了方法的局部变量表、操作数栈、动态连接和方法返回地址等信息。
 
-![image-20211026203353836](https://gitee.com/kaybee/markdown_pics/raw/master/img/jvm_stack_frame.png)
+![image-20211026203353836](/images/jvm_stack_frame.png)
 
 #### 局部变量表 Local Variables Table
 
