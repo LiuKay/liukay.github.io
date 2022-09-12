@@ -9,6 +9,7 @@
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4.12.2/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
 </head>
 
 <body>
@@ -51,6 +52,19 @@
   <script src="//cdn.bootcdn.net/ajax/libs/docsify/4.12.1/plugins/zoom-image.min.js"></script>
   <!-- 字数统计 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-count@1.1.0/dist/countable.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <script>
+     const gitalk = new Gitalk({
+    clientID: '4068573d8d9dc81d140f',
+    clientSecret: '${{ secrets.GIT_TALK_SECRET }}',
+    repo: 'KaybeeNotes',
+    owner: 'LiuKay',
+    admin: ['LiuKay'],
+    // facebook-like distraction free mode
+    distractionFreeMode: false
+  })
+  </script>
 </body>
 
 </html>
