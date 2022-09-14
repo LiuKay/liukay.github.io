@@ -1,4 +1,4 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
   '@vuepress/client': 2.0.0-beta.51
@@ -9,7 +9,7 @@ specifiers:
 devDependencies:
   '@vuepress/client': 2.0.0-beta.51
   vue: 3.2.39
-  vuepress: 2.0.0-beta.51_fa3dab7dfed745452e1bf00be12fbfb2
+  vuepress: 2.0.0-beta.51_7i62w7p625cuklq36af6cl57wi
   vuepress-theme-hope: 2.0.0-beta.100
 
 packages:
@@ -1329,7 +1329,7 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@rollup/plugin-babel/5.3.1_@babel+core@7.19.0+rollup@2.79.0:
+  /@rollup/plugin-babel/5.3.1_b6woseefyuugm6lsnk4tw7iz2e:
     resolution: {integrity: sha512-WFfdLWU/xVWKeRQnKmIAQULUI7Il0gZnBIH/ZFO069wYIfPu+8zrfp/KMW0atmELoRDq8FbiP3VCss9MhCut7Q==}
     engines: {node: '>= 10.0.0'}
     peerDependencies:
@@ -1654,7 +1654,7 @@ packages:
       '@vuepress/shared': 2.0.0-beta.51
       '@vuepress/utils': 2.0.0-beta.51
       markdown-it: 13.0.1
-      markdown-it-anchor: 8.6.5_203ea4fed94a963ea5da6bb0985d1ff7
+      markdown-it-anchor: 8.6.5_ea7kj7wzjkld5jo2noyjqxi764
       markdown-it-emoji: 2.0.2
       mdurl: 1.0.1
     transitivePeerDependencies:
@@ -3883,7 +3883,7 @@ packages:
       sourcemap-codec: 1.4.8
     dev: true
 
-  /markdown-it-anchor/8.6.5_203ea4fed94a963ea5da6bb0985d1ff7:
+  /markdown-it-anchor/8.6.5_ea7kj7wzjkld5jo2noyjqxi764:
     resolution: {integrity: sha512-PI1qEHHkTNWT+X6Ip9w+paonfIQ+QZP9sCeMYi47oqhH+EsW8CrJ8J7CzV19QVOj6il8ATGbK2nTECj22ZHGvQ==}
     peerDependencies:
       '@types/markdown-it': '*'
@@ -5001,7 +5001,7 @@ packages:
       - supports-color
     dev: true
 
-  /vuepress-vite/2.0.0-beta.51_fa3dab7dfed745452e1bf00be12fbfb2:
+  /vuepress-vite/2.0.0-beta.51_7i62w7p625cuklq36af6cl57wi:
     resolution: {integrity: sha512-EfvIBwmgRmj5xO6a3hZxRB5PRNkNK3f6RWunBEgRB31sDpGz9ZAEOTRZZ8lIPM/H1wSH39JkHUDm7fVgeuCCDg==}
     hasBin: true
     peerDependencies:
@@ -5024,11 +5024,11 @@ packages:
       - terser
     dev: true
 
-  /vuepress/2.0.0-beta.51_fa3dab7dfed745452e1bf00be12fbfb2:
+  /vuepress/2.0.0-beta.51_7i62w7p625cuklq36af6cl57wi:
     resolution: {integrity: sha512-IEavO4+9OpyjL9UANVbH8LZ3Cgmj6Amjt41JPM5nZ29U0aDsHJeVWDwyuMVYTlOvZiY+JDHEtIbfM839wFzEcw==}
     hasBin: true
     dependencies:
-      vuepress-vite: 2.0.0-beta.51_fa3dab7dfed745452e1bf00be12fbfb2
+      vuepress-vite: 2.0.0-beta.51_7i62w7p625cuklq36af6cl57wi
     transitivePeerDependencies:
       - '@vue/composition-api'
       - '@vuepress/client'
@@ -5098,7 +5098,7 @@ packages:
       '@babel/core': 7.19.0
       '@babel/preset-env': 7.19.0_@babel+core@7.19.0
       '@babel/runtime': 7.19.0
-      '@rollup/plugin-babel': 5.3.1_@babel+core@7.19.0+rollup@2.79.0
+      '@rollup/plugin-babel': 5.3.1_b6woseefyuugm6lsnk4tw7iz2e
       '@rollup/plugin-node-resolve': 11.2.1_rollup@2.79.0
       '@rollup/plugin-replace': 2.4.2_rollup@2.79.0
       '@surma/rollup-plugin-off-main-thread': 2.2.3

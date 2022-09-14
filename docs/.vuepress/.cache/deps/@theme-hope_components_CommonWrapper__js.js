@@ -37,7 +37,7 @@ import "./chunk-YTQSFUAA.js";
 import "./chunk-BPKF3OQJ.js";
 
 // node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/components/PageFooter.js
-import "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/styles/footer.scss";
+import "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/styles/footer.scss";
 var PageFooter_default = defineComponent({
   name: "PageFooter",
   setup() {
@@ -64,7 +64,7 @@ var PageFooter_default = defineComponent({
 });
 
 // node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/components/CommonWrapper.js
-import "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/styles/common.scss";
+import "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/styles/common.scss";
 var CommonWrapper_default = defineComponent({
   name: "CommonWrapper",
   props: {

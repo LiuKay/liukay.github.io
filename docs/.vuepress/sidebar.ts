@@ -39,11 +39,14 @@ export default sidebar([
     prefix: "/posts/",
     children: [
       {
-        text: "Articles 1-4",
-        icon: "note",
-        collapsable: true,
-        prefix: "article/",
-        children: ["article1", "article2", "article3", "article4"],
+        text: "JVM byte code",
+        icon: "edit",
+        link: "jvm-byte-code"
+      },
+      {
+        text: "IO Models",
+        icon: "edit",
+        link: "IO_Models"
       },
     ],
   },

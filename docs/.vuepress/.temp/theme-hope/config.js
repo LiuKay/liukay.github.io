@@ -5,23 +5,23 @@ import HomePage from "@theme-hope/components/HomePage.js";
 import NormalPage from "@theme-hope/components/NormalPage.js";
 import Navbar from "@theme-hope/modules/navbar/components/Navbar.js";
 import Sidebar from "@theme-hope/modules/sidebar/components/Sidebar.js";
-import Layout from "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/layouts/Layout.js";
-import NotFound from "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/layouts/NotFound.js";
+import Layout from "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/layouts/Layout.js";
+import NotFound from "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/layouts/NotFound.js";
 
 import { useScrollPromise } from "@theme-hope/composables/index.js";
 import { injectDarkMode, setupDarkMode } from "@theme-hope/modules/outlook/composables/index.js";
 import { setupSidebarItems } from "@theme-hope/modules/sidebar/composables/index.js";
 
-import "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/styles/index.scss";
+import "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/styles/index.scss";
 
 
 import BloggerInfo from "@theme-hope/modules/blog/components/BloggerInfo.js";
 import BlogHome from "@theme-hope/modules/blog/components/BlogHome.js";
 import BlogPage from "@theme-hope/modules/blog/components/BlogPage.js";
 import { setupBlog } from "@theme-hope/modules/blog/composables/index.js";
-import "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/blog/styles/layout.scss";
-import Slide from "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/layouts/Slide.js";
-import Blog from "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/blog/layouts/Blog.js";
+import "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/blog/styles/layout.scss";
+import Slide from "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/layouts/Slide.js";
+import Blog from "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/blog/layouts/Blog.js";
 
 
 export default defineClientConfig({

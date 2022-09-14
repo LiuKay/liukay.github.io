@@ -92,7 +92,7 @@ var SourceIcon = () => h(a, { name: "source" }, () => h("path", {
 SourceIcon.displayName = "SourceIcon";
 
 // node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/components/DropdownLink.js
-import "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/styles/dropdown-link.scss";
+import "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/styles/dropdown-link.scss";
 var DropdownLink_default = defineComponent({
   name: "NavbarDropdownLink",
   props: {
@@ -258,7 +258,7 @@ var LanguageDropdown_default = defineComponent({
 });
 
 // node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/components/NavbarBrand.js
-import "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/styles/navbar-brand.scss";
+import "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/styles/navbar-brand.scss";
 var NavbarBrand_default = defineComponent({
   name: "NavbarBrand",
   setup() {
@@ -286,7 +286,7 @@ var NavbarBrand_default = defineComponent({
 });
 
 // node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/components/NavbarLinks.js
-import "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/styles/navbar-links.scss";
+import "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/styles/navbar-links.scss";
 var NavbarLinks_default = defineComponent({
   name: "NavbarLinks",
   setup() {
@@ -298,7 +298,7 @@ var NavbarLinks_default = defineComponent({
 });
 
 // node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/components/NavScreenDropdown.js
-import "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/styles/nav-screen-dropdown.scss";
+import "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/styles/nav-screen-dropdown.scss";
 var NavScreenDropdown_default = defineComponent({
   name: "NavScreenDropdown",
   props: {
@@ -360,7 +360,7 @@ var NavScreenDropdown_default = defineComponent({
 });
 
 // node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/components/NavScreenLinks.js
-import "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/styles/nav-screen-links.scss";
+import "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/styles/nav-screen-links.scss";
 var NavScreenLinks_default = defineComponent({
   name: "NavScreenLinks",
   setup() {
@@ -402,7 +402,7 @@ var OutlookIcon2 = () => h(a, { name: "outlook" }, () => [
 OutlookIcon2.displayName = "OutlookIcon";
 
 // node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/outlook/components/AppearanceSwitch.js
-import "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/outlook/styles/appearance-switch.scss";
+import "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/outlook/styles/appearance-switch.scss";
 var AppearanceSwitch_default = defineComponent({
   name: "AppearanceSwitch",
   setup() {
@@ -439,7 +439,7 @@ var AppearanceSwitch_default = defineComponent({
 });
 
 // node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/outlook/components/AppearanceMode.js
-import "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/outlook/styles/appearance-switch.scss";
+import "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/outlook/styles/appearance-switch.scss";
 var AppearanceMode_default = defineComponent({
   name: "AppearanceMode",
   setup() {
@@ -456,7 +456,7 @@ var AppearanceMode_default = defineComponent({
 });
 
 // node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/outlook/components/ThemeColorPicker.js
-import "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/outlook/styles/theme-color-picker.scss";
+import "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/outlook/styles/theme-color-picker.scss";
 var ThemeColorPicker_default = defineComponent({
   name: "ThemeColorPicker",
   props: {
@@ -497,7 +497,7 @@ var ThemeColorPicker_default = defineComponent({
 });
 
 // node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/outlook/components/ThemeColor.js
-import "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/outlook/styles/theme-color-picker.scss";
+import "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/outlook/styles/theme-color-picker.scss";
 var ThemeColor_default = defineComponent({
   name: "ThemeColor",
   setup() {
@@ -516,7 +516,7 @@ var ThemeColor_default = defineComponent({
 });
 
 // node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/outlook/components/ToggleFullScreenButton.js
-import "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/outlook/styles/toggle-full-screen-button.scss";
+import "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/outlook/styles/toggle-full-screen-button.scss";
 var ToggleFullScreenButton_default = defineComponent({
   name: "ToggleFullScreenButton",
   setup() {
@@ -553,7 +553,7 @@ var OutlookSettings_default = defineComponent({
 });
 
 // node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/components/NavScreen.js
-import "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/styles/nav-screen.scss";
+import "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/styles/nav-screen.scss";
 var NavScreen_default = defineComponent({
   name: "NavScreen",
   props: {
@@ -600,7 +600,7 @@ var NavScreen_default = defineComponent({
 });
 
 // node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/outlook/components/OutlookButton.js
-import "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/outlook/styles/outlook-button.scss";
+import "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/outlook/styles/outlook-button.scss";
 var OutlookButton_default = defineComponent({
   name: "OutlookButton",
   setup() {
@@ -631,7 +631,7 @@ var OutlookButton_default = defineComponent({
 });
 
 // node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/components/ToggleNavbarButton.js
-import "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/styles/toggle-navbar-button.scss";
+import "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/styles/toggle-navbar-button.scss";
 var ToggleNavbarButton = ({ active = false }, { emit }) => h("button", {
   class: ["toggle-navbar-button", { "is-active": active }],
   "aria-label": "Toggle Navbar",
@@ -647,7 +647,7 @@ ToggleNavbarButton.displayName = "ToggleNavbarButton";
 var ToggleNavbarButton_default = ToggleNavbarButton;
 
 // node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/components/ToggleSidebarButton.js
-import "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/styles/toggle-sidebar-button.scss";
+import "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/styles/toggle-sidebar-button.scss";
 var ToggleSidebarButton = (_, { emit }) => h("button", {
   class: "toggle-sidebar-button",
   title: "Toggle Sidebar",
@@ -658,7 +658,7 @@ ToggleSidebarButton.emits = ["toggle"];
 var ToggleSidebarButton_default = ToggleSidebarButton;
 
 // node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/components/RepoLink.js
-import "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/styles/repo-link.scss";
+import "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/styles/repo-link.scss";
 var RepoLink_default = defineComponent({
   name: "RepoLink",
   components: { BitbucketIcon, GiteeIcon, GitHubIcon, GitlabIcon, SourceIcon },
@@ -685,7 +685,7 @@ var RepoLink_default = defineComponent({
 });
 
 // node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/components/Navbar.js
-import "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/styles/navbar.scss";
+import "D:/KaybeeNotes/node_modules/.pnpm/vuepress-theme-hope@2.0.0-beta.100/node_modules/vuepress-theme-hope/lib/client/modules/navbar/styles/navbar.scss";
 var Navbar_default = defineComponent({
   name: "NavBar",
   emits: ["toggle-sidebar"],

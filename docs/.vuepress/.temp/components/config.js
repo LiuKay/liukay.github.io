@@ -1,9 +1,9 @@
-import { useStyleTag } from "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-plugin-components@2.0.0-beta.100/node_modules/vuepress-plugin-components/lib/client/composables/index.js";
+import { useStyleTag } from "D:/KaybeeNotes/node_modules/.pnpm/vuepress-plugin-components@2.0.0-beta.100/node_modules/vuepress-plugin-components/lib/client/composables/index.js";
 import { h } from "vue";
 import { defineClientConfig } from "@vuepress/client";
-import Badge from "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-plugin-components@2.0.0-beta.100/node_modules/vuepress-plugin-components/lib/client/components/Badge.js";
-import FontIcon from "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-plugin-components@2.0.0-beta.100/node_modules/vuepress-plugin-components/lib/client/components/FontIcon.js";
-import BackToTop from "D:/Code/vuepress-hope/node_modules/.pnpm/vuepress-plugin-components@2.0.0-beta.100/node_modules/vuepress-plugin-components/lib/client/components/BackToTop.js";
+import Badge from "D:/KaybeeNotes/node_modules/.pnpm/vuepress-plugin-components@2.0.0-beta.100/node_modules/vuepress-plugin-components/lib/client/components/Badge.js";
+import FontIcon from "D:/KaybeeNotes/node_modules/.pnpm/vuepress-plugin-components@2.0.0-beta.100/node_modules/vuepress-plugin-components/lib/client/components/FontIcon.js";
+import BackToTop from "D:/KaybeeNotes/node_modules/.pnpm/vuepress-plugin-components@2.0.0-beta.100/node_modules/vuepress-plugin-components/lib/client/components/BackToTop.js";
 
 
 export default defineClientConfig({

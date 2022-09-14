@@ -5,14 +5,14 @@ import sidebar from "./sidebar.js";
 export default hopeTheme({
   author: {
     name: "Kaybee",
-    url: "https://mrhope.site",
+    url: "https://github.com/LiuKay",
   },
 
   iconAssets: "iconfont",
 
   logo: "/logo.svg",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "LiuKay/KaybeeNotes",
 
   // navbar
   navbar: navbar,

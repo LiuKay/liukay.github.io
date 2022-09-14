@@ -56,15 +56,14 @@ export default navbar([
     prefix: "/posts/",
     children: [
       {
-        text: "Articles 1-4",
+        text: "JVM byte code",
         icon: "edit",
-        prefix: "article/",
-        children: [
-          { text: "Article 1", icon: "edit", link: "article1" },
-          { text: "Article 2", icon: "edit", link: "article2" },
-          "article3",
-          "article4",
-        ],
+        link: "jvm-byte-code"
+      },
+      {
+        text: "JVM byte code",
+        icon: "edit",
+        link: "IO_Models"
       },
     ],
   },
