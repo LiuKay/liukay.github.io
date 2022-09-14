@@ -6,7 +6,7 @@ export default defineUserConfig({
   title: "Kaybee's Notes",
   description: "A demo for vuepress-theme-hope",
 
-  base: "/",
+  base: "/KaybeeNotes/",
 
   theme,
 });
