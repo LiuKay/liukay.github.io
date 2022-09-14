@@ -1,0 +1,13 @@
+/node_modules
+/package-lock.json
+*.drawio
+.DS_Store
+# VS Code Config file
+.vscode/
+
+# Build files
+packages/*/lib/
+!/docs/.vuepress/.cache/
+!/docs/.vuepress/.temp/
+.vuepress/dist/
+.idea
