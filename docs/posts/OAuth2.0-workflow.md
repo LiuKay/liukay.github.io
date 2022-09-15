@@ -15,16 +15,16 @@ tag:
 
 1. **Authorization Code Grant**
 
-   ![Authorization Code Grant](./images/Authorization%20Code%20Grant.png)
+   ![Authorization Code Grant](./images/Authorization-Code-Grant.png)
 
 2. **Implicit Grant**
 
-![Implicit Grant](./images/Implicit%20Grant.png)
+![Implicit Grant](./images/Implicit-Grant.png)
 
 3. **Client Credential Grant**
 
-![Client Credential Grant](./images/Client%20Credential%20Grant.png)
+![Client Credential Grant](./images/Client-Credential-Grant.png)
 
 4. *Password Grant*
 
-![Password Grant](./images/Password%20Grant.png)
+![Password Grant](./images/Password-Grant.png)
