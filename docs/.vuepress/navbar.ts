@@ -61,7 +61,7 @@ export default navbar([
         link: "jvm-byte-code"
       },
       {
-        text: "JVM byte code",
+        text: "Linux IO Models",
         icon: "edit",
         link: "IO_Models"
       },

@@ -14,6 +14,12 @@ export default hopeTheme({
 
   repo: "LiuKay/KaybeeNotes",
 
+  docsRepo: "LiuKay/KaybeeNotes",
+
+  docsBranch: "main",
+
+  docsDir: "docs",
+
   // navbar
   navbar: navbar,
 
@@ -24,7 +30,7 @@ export default hopeTheme({
 
   displayFooter: true,
 
-  pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
+  pageInfo: ["Author", "Original", "Date", "Category", "Tag", "Word", "ReadingTime"],
 
   blog: {
     description: "A BackEnd programmer",
