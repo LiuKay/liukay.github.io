@@ -1,4 +1,11 @@
-- Review
+---
+title: OAuth2 4种认证流程
+category:
+  - 编程技术
+tag:
+  - OAuth2
+  - REVIEW
+--- 
 
 > [How OAuth 2.0 works and how to choose the right flow](https://itnext.io/an-oauth-2-0-introduction-for-beginners-6e386b19f7a9) 
 >
@@ -8,16 +15,16 @@
 
 1. **Authorization Code Grant**
 
-   ![anmFPvD_EVMiZOo-W76qyA](https://gitee.com/kaybee/markdown_pics/raw/master/img/20200601084308.png)
+   ![Authorization Code Grant](./images/Authorization%20Code%20Grant.png)
 
 2. **Implicit Grant**
 
-![HHqzb0tGtxGw68MIP3oBaw](https://gitee.com/kaybee/markdown_pics/raw/master/img/20200601084437.png)
+![Implicit Grant](./images/Implicit%20Grant.png)
 
 3. **Client Credential Grant**
 
-![-ubkjTKTSVRxIBTxK4MgQ](https://gitee.com/kaybee/markdown_pics/raw/master/img/20200601084623.png)
+![Client Credential Grant](./images/Client%20Credential%20Grant.png)
 
 4. *Password Grant*
 
-![wkgiXdBnGof02eMYyqzWiQ](https://gitee.com/kaybee/markdown_pics/raw/master/img/20200601084645.png)
+![Password Grant](./images/Password%20Grant.png)

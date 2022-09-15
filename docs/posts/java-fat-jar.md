@@ -1,4 +1,14 @@
-﻿## 什么是 Fat/Shade/Shadow Jar ?
+﻿---
+title: 什么是 Fat/Shade/Shadow Jar ?
+category:
+ - 编程技术
+tag:
+ - 问题
+ - Java
+ - SHARE
+---
+
+
 
 ## 问题
 

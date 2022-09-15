@@ -1,4 +1,13 @@
-## I/O Models
+---
+title: Linux I/O Models
+category:
+    - 编程技术
+tag:
+    - Linux
+    - 基础内功
+    - 总结
+    - REVIEW
+---
 
 在 Unix 下有 5 种 I/O 模型:
 

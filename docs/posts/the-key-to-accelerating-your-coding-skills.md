@@ -1,7 +1,13 @@
-### Review
+---
+title: 提升 Coding 能力的关键
+category:
+  - 编程技术
+tag:
+  - 学习方法
+  - REVIEW
+---
 
 > [The Key to Accelerating Your Coding Skills - **KEN MAZAIKA**](http://blog.thefirehoseproject.com/posts/learn-to-code-and-be-self-reliant/)
->
 > 作者的个人主页：https://kenmazaika.com/about/
 
 作者在这篇文章中说明了快速提升编程能力的关键点
@@ -22,7 +28,7 @@
 
 ##### 2.2 转折点
 
-![]([markdown_pics/20200531090719.png at main · LiuKay/markdown_pics (github.com)](https://github.com/LiuKay/markdown_pics/blob/main/img/20200531090719.png))
+![pic](https://github.com/LiuKay/markdown_pics/blob/main/img/20200531090719.png)
 
 这个阶段称为`The Inflection Point`, 虽然只是整个学习过程的一部分，但却是最重要的一个阶段，因为在这个阶段你将要面对的是那些没有现成答案的问题。
 

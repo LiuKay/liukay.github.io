@@ -3,8 +3,8 @@ import theme from "./theme.js";
 
 export default defineUserConfig({
   lang: "zh-CN",
-  title: "Kaybee's Notes",
-  description: "A demo for vuepress-theme-hope",
+  title: "Kaybee's Blog",
+  description: "Kaybee's Blog",
 
   base: "/KaybeeNotes/",
 

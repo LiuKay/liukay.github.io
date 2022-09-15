@@ -1,4 +1,13 @@
-﻿
+﻿---
+title: 容器内 JVM 内存设置最佳实践
+category:
+  - 编程技术
+tag:
+  - Java
+  - JVM
+  - docker
+--- 
+
 参考：[Best Practices: Java Memory Arguments for Containers - DZone Java](https://dzone.com/articles/best-practices-java-memory-arguments-for-container)
 
 **TL;DR**

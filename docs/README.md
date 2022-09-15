@@ -8,20 +8,10 @@ heroText: Kaybee's Blog
 tagline: To measure is to know.
 heroFullScreen: false
 projects:
-  - icon: project
+  - icon: Github
     name: project name
     desc: project detailed description
-    link: https://your.project.link
-
-  - icon: link
-    name: link name
-    desc: link detailed description
-    link: https://link.address
-
-  - icon: book
-    name: book name
-    desc: Detailed description of the book
-    link: https://link.to.your.book
+    link: https://github.com/LiuKay
 
   - icon: article
     name: article name
