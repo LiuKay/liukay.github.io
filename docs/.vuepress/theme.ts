@@ -50,16 +50,16 @@ export default hopeTheme({
       autoExcerpt: true,
     },
 
-    // comment: {
-    //   /**
-    //    * Using Giscus
-    //    */
-    //   provider: "Giscus",
-    //   repo: "vuepress-theme-hope/giscus-discussions",
-    //   repoId: "R_kgDOG_Pt2A",
-    //   category: "Announcements",
-    //   categoryId: "DIC_kwDOG_Pt2M4COD69",
-    // },
+    comment: {
+      /**
+       * Using Giscus
+       */
+      provider: "Giscus",
+      repo: "LiuKay/KaybeeNotes",
+      repoId: "R_kgDOGYbmGQ",
+      category: "Announcements",
+      categoryId: "DIC_kwDOGYbmGc4CRcof",
+    },
 
     mdEnhance: {
       align: true,
