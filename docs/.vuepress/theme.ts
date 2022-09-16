@@ -36,12 +36,11 @@ export default hopeTheme({
     description: "A BackEnd programmer",
     intro: "/intro.html",
     medias: {
-      Discord: "https://example.com",
-      Email: "https://example.com",
-      Gitee: "https://example.com",
-      GitHub: "https://example.com",
-      Gmail: "https://example.com",
-      Wechat: "https://example.com",
+      Email: "passionno1@qq.com",
+      Gitee: "https://gitee.com/kaybee",
+      GitHub: "https://github.com/LiuKay",
+      Gmail: "notserious41@gmail.com",
+      Wechat: "kaybee666",
     },
   },
 
