@@ -6,7 +6,7 @@ export default defineUserConfig({
   title: "Kaybee's Blog",
   description: "Kaybee's Blog",
 
-  base: "/KaybeeNotes/",
+  base: "/",
 
   theme,
 });

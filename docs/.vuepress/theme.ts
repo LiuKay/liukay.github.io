@@ -12,9 +12,9 @@ export default hopeTheme({
 
   logo: "/logo.svg",
 
-  repo: "LiuKay/KaybeeNotes",
+  repo: "LiuKay/liukay.github.io",
 
-  docsRepo: "LiuKay/KaybeeNotes",
+  docsRepo: "LiuKay/liukay.github.io",
 
   docsBranch: "main",
 
