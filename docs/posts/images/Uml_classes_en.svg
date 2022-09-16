@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="300" height="200" viewBox="0 0 300 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="300" height="200" fill="#fff"/>
+    <g id="arrows" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="square" stroke-miterlimit="3">
+        <path d="M28,177L136,177"/>
+        <path d="M28,146L136,146"/>
+        <path d="M28,22L176,22"/>
+        <path d="M28,53L156,53"/>
+        <path d="M28,84L156,84" stroke-dasharray="10.5,9,0,0"/>
+        <path d="M28,115L176,115" stroke-dasharray="10.5,9,0,0"/>
+        <path d="M157,32L177.5,22L157,12"/>
+        <path d="M177.5,53L157,43L157,63L177.5,53Z"/>
+        <path d="M177.5,84L157,74L157,94L177.5,84Z"/>
+        <path d="M157,125L177.5,115L157,105"/>
+        <path d="M177.5,146L157,136L136.5,146L157,156L177.5,146Z"/>
+        <path d="M177.5,177L157,167L136.5,177L157,187L177.5,177Z" fill="#000"/>
+        <path d="M177.5,177L157,167L136.5,177L157,187L177.5,177Z"/>
+    </g>
+    <g id="text" stroke="none" font-family="Arial,sans-serif" font-size="13">
+        <text x="191" y="26">Association</text>
+        <text x="191" y="57">Inheritance</text>
+        <text x="191" y="80">Realization /</text>
+        <text x="191" y="96">Implementation</text>
+        <text x="191" y="119">Dependency</text>
+        <text x="191" y="150">Aggregation</text>
+        <text x="191" y="181">Composition</text>
+    </g>
+</svg>

@@ -8,11 +8,12 @@ tag:
 ---
 
 
-#### Relationships
+> 参考：https://en.wikipedia.org/wiki/Class_diagram
 
-![Uml_classes_en](https://gitee.com/kaybee/markdown_pics/raw/master/img/Uml_classes_en.svg)
+![https://en.wikipedia.org/wiki/Class_diagram#/media/File:Uml_classes_en.svg](./images/Uml_classes_en.svg)
 
-##### Instance-level relationships 实例间的关系
+
+## Instance-level relationships 实例间的关系
 
 - Dependency
 
@@ -36,9 +37,9 @@ tag:
 
 组成。组成关系用填充的菱形指向包含class, 另一端用指向被包含的 class.
 
-###### Aggregation 和 Composition 的区别
+## Aggregation 和 Composition 的区别
 
-**组成 composition:** 
+**组成 composition:**
 
 - 当要表达真实世界中的`部分-整体`关系时，如汽车引擎是汽车的一部分。
 - 当整体销毁时，部分也将销毁 (When the container is destroyed, the contents are usually not destroyed)。如学校和学校中的部门，学校关闭了，它的部分也就不成立了。
@@ -48,7 +49,7 @@ tag:
 - 当表达一种软件或数据库关系。如汽车引擎的模型 ENG01 是汽车模型CM01 的部分，该汽车引擎模型可能也是另一种车型的部分。
 - 当整体销毁时，部分不会被销毁 (When the container is destroyed, the contents are usually not destroyed)。如教授教一批学生，当教授去世时，学生不会跟着去世...(WIKI上的例子)
 
-##### Class-level relationships 类间的关系
+### Class-level relationships 类间的关系
 
 - Generalization/Inheritance 泛化/继承
 
@@ -62,7 +63,7 @@ tag:
 
   实现代表了一个元素（实现类）实现了另一个元素（接口）定义的行为（ a realization relationship is a relationship between two model elements, in which one model element (the client) realizes (implements or executes) the behavior that the other model element (the supplier) specifies）
 
-##### General relationship 通用关系
+### General relationship 通用关系
 
 - Dependency
 
