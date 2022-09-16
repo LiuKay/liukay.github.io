@@ -10,7 +10,7 @@ export default hopeTheme({
 
   iconAssets: "iconfont",
 
-  logo: "/logo.svg",
+  logo: "/a.jpg",
 
   repo: "LiuKay/liukay.github.io",
 

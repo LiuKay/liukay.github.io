@@ -3,15 +3,17 @@ title: 技术专题
 index: false
 icon: creative
 category:
-  - Guide
+  - 编程技术
+  - 总结
 ---
 
-## Catalog
+## 目录
 
-- [Markdown Enhance](markdown.md)
+- [JVM](jvm.md)
 
-- [Page Config](page.md)
+- [Java 多线程](java-thread.md)
 
-- [Function Disable](disable.md)
+- [Redis](redis.md)
 
-- [Encryption Demo](encrypt.md)
+- [分布式系统](distribution-system/README.md)
+  - [分布式事务](distribution-system/distributed-transaction.md)

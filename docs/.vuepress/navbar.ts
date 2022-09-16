@@ -6,24 +6,7 @@ export default navbar([
   {
     text: "技术专题",
     icon: "note",
-    prefix: "/tech/" ,
-    children: [
-      {
-        text: "JVM",
-        icon: "edit",
-        link: "JVM"
-      },
-      {
-        text: "Redis",
-        icon: "edit",
-        link: "Redis"
-      },
-      {
-        text: "分布式系统",
-        icon: "edit",
-        link: "distribution-system",
-      },
-    ],
+    link: "/tech/" ,
   },
   {
     text: "博客归档",

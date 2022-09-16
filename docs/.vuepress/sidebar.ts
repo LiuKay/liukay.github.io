@@ -15,9 +15,9 @@ export default sidebar([
         children: [
             "JVM",
             "Redis",
+            "java-thread",
             {
                 text: "分布式系统",
-                icon: "edit",
                 prefix: "distribution-system/",
                 children: [
                     "distributed-transaction"
