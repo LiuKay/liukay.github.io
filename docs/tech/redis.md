@@ -6,7 +6,6 @@ category:
     - 总结
 tag:
     - Redis
-    - REVIEW
 ---
 
 ## 内部数据结构

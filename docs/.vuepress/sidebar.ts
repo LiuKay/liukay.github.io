@@ -8,6 +8,11 @@ export default sidebar([
         link: "/guide/",
     },
     {
+        icon: "repo",
+        text: "学习之道",
+        link: "/guide/how-to-learn",
+    },
+    {
         icon: "note",
         text: "技术专题",
         prefix: "/tech/",
@@ -26,9 +31,9 @@ export default sidebar([
         ],
     },
     {
-        text: "博客归档",
+        text: "ARTS",
         icon: "blog",
-        prefix: "/posts/",
+        prefix: "/ARTS/",
         children: [
             "jvm-byte-code",
             "IO-Models",

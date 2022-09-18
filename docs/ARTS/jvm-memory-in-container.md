@@ -4,7 +4,7 @@ date: 2021-01-08
 category:
   - 编程技术
 tag:
-  - Java
+  - TIPS
   - JVM
   - docker
 --- 
@@ -17,13 +17,14 @@ tag:
 
 1. -XX:MaxRAMFraction, -XX:MinRAMFraction
 2. -XX:MaxRAMPercentage, -XX:MinRAMPercentage
-3. -Xmx 
+3. -Xmx
 
 应该怎么使用？
 
-### 1 -XX:MaxRAMFraction, -XX:MinRAMFraction：
+## 1 -XX:MaxRAMFraction, -XX:MinRAMFraction
 
-##### 支持版本：only Java 8 update 131 to Java 8 update 190
+::: tip 支持版本：only Java 8 update 131 to Java 8 update 190
+:::
 
 局限：
 
@@ -35,9 +36,10 @@ tag:
 
 如果容器分配内存为 1GB, 设置 -XX:MaxRAMFraction=2，则 JVM 最大堆内存分配约为最大可用内存的 1/2(约512G).
 
-### 2 -XX:MaxRAMPercentage, -XX:MinRAMPercentage
+## 2 -XX:MaxRAMPercentage, -XX:MinRAMPercentage
 
-##### 支持版本：from Java 8 update 191 and above.
+::: tip 支持版本：from Java 8 update 191 and above.
+:::
 
 `-XX:+UseContainerSupport`这个参数这这些支持的版本中已经默认开启了，不需要再显示设置。
 
@@ -47,22 +49,18 @@ tag:
 
 如果容器分配内存为 1GB, 设置 -XX:MaxRAMPercentage=50，则 JVM最大堆为 1GB*50%
 
-### 3 -Xmx：
+## 3 -Xmx
 
 直接设置 JVM 的最大堆内存值
 
-##### 支持版本：all
+::: tip 支持版本：all
+:::
 
 局限：
 
 1. 如果你直接使用 -Xmx 来设置最大堆内存，当 JVM 内存超过 容器的内存限制，会遇到 OOM 或直接被 Kill掉
 
-
-
-
-### 实践建议
+## 实践建议
 
 1. 不管怎么设置最大堆的内存，记得留至少 25% 或更多的内存，因为JVM 运行时不止有堆内存，还有每个线程栈，内地内存，socket buffer 等等内存消耗
 2. 如果一个容器里面只有一个 Java 应用在跑，把初始堆大小和最大堆大小设置为一样，避免 JVM扩容导致 JVM 暂停。如果初始内存设置的内存大于容器限制，JVM 甚至不会启动，在一开始就发现问题
-
-

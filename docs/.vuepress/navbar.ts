@@ -9,13 +9,13 @@ export default navbar([
     link: "/tech/" ,
   },
   {
-    text: "博客归档",
+    text: "ARTS",
     icon: "blog",
-    link: "/posts",
+    link: "/ARTS/",
   },
   {
     icon: "ask",
-    text: "Q&A",
+    text: "My Stack Overflow",
     link: "/questions/",
   },
 ]);

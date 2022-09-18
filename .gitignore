@@ -12,3 +12,4 @@ docs/.vuepress/.cache/deps
 docs/.vuepress/.temp
 docs/.vuepress/dist/
 .idea
+/draft
