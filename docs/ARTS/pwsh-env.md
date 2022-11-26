@@ -1,6 +1,6 @@
 ---
 title: 在 Windows Terminal 中建一个有代理能力的配置
-date: 2021-10-12
+date: 2022-11-25
 category:
     - 博客
     - Tips
