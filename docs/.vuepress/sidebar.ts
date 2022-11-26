@@ -43,6 +43,7 @@ export default sidebar([
             "reactor-model",
             "uml-class",
             "java-fat-jar",
+            "pwsh-env"
         ],
     },
     {
