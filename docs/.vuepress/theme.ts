@@ -26,7 +26,7 @@ export default hopeTheme({
   // sidebar
   sidebar: sidebar,
 
-  footer: "Default footer",
+  footer: "To measure is to know.",
 
   displayFooter: true,
 
