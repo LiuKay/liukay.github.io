@@ -29,3 +29,32 @@ tag:
 其中 `$env:HTTP_PROXY='http://127.0.0.1:10809'` 就是设置环境变量，该变量只在当前的 Powershell session 中生效，不影响其他的命令行工具，这样就能随取随用了。
 
 ![windows_terminal_proxy](./images/windows_terminal_proxy.png)
+
+### Git bash with Proxy
+要在Windows Terminal中新建一个设置了代理的Git Bash，请按照以下步骤操作：
+
+1. 打开Windows Terminal。
+
+2. 点击下拉箭头，然后选择“设置”(Settings)。这将打开Windows Terminal的设置JSON文件。
+
+3. 在"profiles" > "list"部分，添加一个新的配置对象，如下所示：
+
+```json
+{
+    "guid": "{GUID}",
+    "name": "Git Bash with Proxy",
+    "commandline": "C:/Program Files/Git/bin/bash.exe --login -i -c \"export HTTP_PROXY=http://<username>:<password>@<proxy-server>:<port>; export HTTPS_PROXY=https://<username>:<password>@<proxy-server>:<port>; exec bash\"",
+    "icon": "C:/Program Files/Git/mingw64/share/git/git-for-windows.ico",
+    "hidden": false
+}
+```
+
+请确保：
+
+将{GUID}替换为一个唯一的GUID。您可以使用在线生成器（如https://www.guidgenerator.com/）生成GUID。
+根据实际情况替换<username>、<password>、<proxy-server>和<port>为您的代理服务器详细信息。如果代理服务器不需要身份验证，只需省略<username>:<password>@部分。
+如果您的Git安装路径与示例不同，请相应地修改"commandline"和"icon"中的路径。
+
+4. 保存并关闭设置JSON文件。
+
+5. 返回Windows Terminal，点击下拉箭头，您应该能看到一个名为"Git Bash with Proxy"的新配置选项。选择它，将打开一个设置了代理的Git Bash实例。
