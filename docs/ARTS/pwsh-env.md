@@ -31,6 +31,7 @@ tag:
 ![windows_terminal_proxy](./images/windows_terminal_proxy.png)
 
 ### Git bash with Proxy
+
 要在Windows Terminal中新建一个设置了代理的Git Bash，请按照以下步骤操作：
 
 1. 打开Windows Terminal。
@@ -43,18 +44,14 @@ tag:
 {
     "guid": "{GUID}",
     "name": "Git Bash with Proxy",
-    "commandline": "C:/Program Files/Git/bin/bash.exe --login -i -c \"export HTTP_PROXY=http://<username>:<password>@<proxy-server>:<port>; export HTTPS_PROXY=https://<username>:<password>@<proxy-server>:<port>; exec bash\"",
+    "commandline": "C:/Program Files/Git/bin/bash.exe --login -i -c \"export HTTP_PROXY=http://username:password@proxy-server:port; export HTTPS_PROXY=https://username:password@proxy-server:port; exec bash\"",
     "icon": "C:/Program Files/Git/mingw64/share/git/git-for-windows.ico",
     "hidden": false
 }
 ```
 
-请确保：
+请确保：将{GUID}替换为一个唯一的GUID。您可以使用在线生成器（如`https://www.guidgenerator.com/`）生成GUID。
 
-将{GUID}替换为一个唯一的GUID。您可以使用在线生成器（如https://www.guidgenerator.com/）生成GUID。
-根据实际情况替换<username>、<password>、<proxy-server>和<port>为您的代理服务器详细信息。如果代理服务器不需要身份验证，只需省略<username>:<password>@部分。
-如果您的Git安装路径与示例不同，请相应地修改"commandline"和"icon"中的路径。
+根据实际情况替换username、password、proxy-server和port为您的代理服务器详细信息。如果代理服务器不需要身份验证，只需省略username:password@部分。如果你的Git安装路径与示例不同，请相应地修改"commandline"和"icon"中的路径。
 
-4. 保存并关闭设置JSON文件。
-
-5. 返回Windows Terminal，点击下拉箭头，您应该能看到一个名为"Git Bash with Proxy"的新配置选项。选择它，将打开一个设置了代理的Git Bash实例。
+最后保存并关闭设置JSON文件，返回Windows Terminal，点击下拉箭头，你应该能看到一个名为"Git Bash with Proxy"的新配置选项。选择它，将打开一个设置了代理的Git Bash实例。
