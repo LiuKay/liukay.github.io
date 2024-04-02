@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-9adfe478","path":"/tag/oauth2.0/","title":"OAuth2.0 \u6807\u7B7E","lang":"zh-CN","frontmatter":{"title":"OAuth2.0 \u6807\u7B7E","blog":{"type":"category","name":"OAuth2.0","key":"tag"},"layout":"Blog"},"excerpt":"","headers":[],"git":{},"readingTime":{"minutes":0,"words":0},"filePathRelative":null}');export{t as data};
