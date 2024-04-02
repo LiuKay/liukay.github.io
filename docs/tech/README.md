@@ -9,11 +9,4 @@ category:
 
 ## 目录
 
-- [JVM](jvm.md)
-
-- [Java 多线程](java-thread.md)
-
-- [Redis](redis.md)
-
-- [分布式系统](distribution-system/README.md)
-  - [分布式事务](distribution-system/distributed-transaction.md)
+一些技术专题的整理

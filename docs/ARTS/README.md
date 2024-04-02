@@ -1,5 +1,6 @@
 ---
 title: ARTS
+index: false
 category:
     - 学习之道
 tag:
@@ -8,10 +9,10 @@ tag:
 
 ## 什么是 ARTS
 
-Algorithm: [一道算法题](/tag/algorithm/)
+Algorithm
 
-Review: [读一篇英文文章](/tag/review/)
+Review
 
-Technique/Tips: [分享一个小技术](/tag/tips/)
+Technique/Tips
 
-Share: [分享一个观点](/tag/share/)
+Share

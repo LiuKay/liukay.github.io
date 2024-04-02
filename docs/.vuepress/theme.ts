@@ -8,6 +8,8 @@ export default hopeTheme({
     url: "https://github.com/LiuKay",
   },
 
+  hotReload:true,
+
   iconAssets: "iconfont",
 
   logo: "/a.jpg",
@@ -46,7 +48,7 @@ export default hopeTheme({
 
   plugins: {
     blog: {
-      autoExcerpt: true,
+      excerpt: true,
     },
 
     comment: {
@@ -65,21 +67,19 @@ export default hopeTheme({
       attrs: true,
       chart: true,
       codetabs: true,
-      container: true,
+      hint: true,
       demo: true,
       echarts: true,
       flowchart: true,
       gfm: true,
-      imageSize: true,
+      imgSize: true,
       include: true,
-      lazyLoad: true,
+      imgLazyload: true,
       mark: true,
       mermaid: true,
+      obsidianImgSize:true,
       playground: {
         presets: ["ts", "vue"],
-      },
-      presentation: {
-        plugins: ["highlight", "math", "search", "notes", "zoom"],
       },
       stylize: [
         {
@@ -97,8 +97,8 @@ export default hopeTheme({
       sub: true,
       sup: true,
       tabs: true,
-      tex: true,
-      vpre: true,
+      katex: true,
+      vPre: true,
       vuePlayground: true,
     },
   },
