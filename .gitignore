@@ -13,3 +13,4 @@ docs/.vuepress/.temp
 docs/.vuepress/dist/
 .idea
 /draft
+.obsidian
