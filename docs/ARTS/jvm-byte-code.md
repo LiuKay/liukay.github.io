@@ -3,10 +3,11 @@ title: JVM 字节码介绍
 date: 2021-01-16
 category:
   - 编程技术
-tag:
-  - REVIEW
+tags:
   - JVM
---- 
+  - TIPS
+---
+
 
 >来源： https://dzone.com/articles/introduction-to-java-bytecode
 

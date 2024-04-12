@@ -3,10 +3,10 @@ title: OAuth2.0 的4种授权流程
 date: 2018-12-12
 category:
   - 编程技术
-tag:
-  - OAuth2.0
-  - REVIEW
---- 
+tags:
+  - OAuth2
+---
+
 
 > [How OAuth 2.0 works and how to choose the right flow](https://itnext.io/an-oauth-2-0-introduction-for-beginners-6e386b19f7a9)
 > 作者：[Lorenzo Spyna](https://itnext.io/@spyna?source=post_header_lockup)

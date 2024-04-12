@@ -1,12 +1,12 @@
-﻿---
+---
 title: 理解 Reactor 模式
 date: 2021-03-03
 category:
+  - ARTS
   - 编程技术
 tag:
-  - REVIEW
-  - Design
---- 
+  - TIPS
+---
 
 > [Understanding Reactor Pattern: Thread-Based and Event-Driven - DZone Java](https://dzone.com/articles/understanding-reactor-pattern-thread-based-and-eve)
 
