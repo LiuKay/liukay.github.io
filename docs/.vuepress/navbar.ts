@@ -14,8 +14,8 @@ export default navbar([
     link: "/ARTS/",
   },
   {
-    icon: "ask",
-    text: "My Stack Overflow",
-    link: "/questions/",
-  },
+    text: "杂项",
+    icon: "blog",
+    link: "/others/",
+  }
 ]);
