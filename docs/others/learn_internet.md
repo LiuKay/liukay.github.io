@@ -1,5 +1,5 @@
 ---
-title: 配眼镜攻略
+title: 科学上网
 date: 2026-06-27
 category:
   - 技能
